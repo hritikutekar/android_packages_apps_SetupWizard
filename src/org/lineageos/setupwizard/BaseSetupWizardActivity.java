@@ -234,8 +234,7 @@ public abstract class BaseSetupWizardActivity extends Activity implements Naviga
     }
 
     protected void onNextPressed() {
-        startActivity(new Intent(this, FinishActivity.class));
-        // nextAction(NEXT_REQUEST);
+        nextAction(NEXT_REQUEST);
     }
 
     protected void onSkipPressed() {
@@ -246,10 +245,6 @@ public abstract class BaseSetupWizardActivity extends Activity implements Naviga
         if (mNavigationBar != null) {
             mNavigationBar.getNextButton().setText(resId);
         }
-    }
-
-    public Button getNextButton() {
-        return mNavigationBar.getNextButton();
     }
 
     protected void setSkipText(int resId) {
