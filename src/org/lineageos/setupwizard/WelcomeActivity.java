@@ -17,6 +17,7 @@
 
 package org.lineageos.setupwizard;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
@@ -36,7 +37,7 @@ public class WelcomeActivity extends BaseSetupWizardActivity {
         mRootView = findViewById(R.id.setup_wizard_layout);
         setNextText(R.string.start);
         setSkipText(R.string.emergency_call);
-        findViewById(R.id.start).setOnClickListener(view -> onNextPressed());
+        findViewById(R.id.start).setOnClickListener(view -> startActivity(new Intent(this, FinishActivity.class)));
         findViewById(R.id.emerg_dialer)
                 .setOnClickListener(view -> startEmergencyDialer());
         findViewById(R.id.launch_accessibility)

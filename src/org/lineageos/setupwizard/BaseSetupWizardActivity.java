@@ -247,6 +247,10 @@ public abstract class BaseSetupWizardActivity extends Activity implements Naviga
         }
     }
 
+    public Button getNextButton() {
+        return mNavigationBar.getNextButton();
+    }
+
     protected void setSkipText(int resId) {
         if (mNavigationBar != null) {
             mNavigationBar.getSkipButton().setText(resId);
