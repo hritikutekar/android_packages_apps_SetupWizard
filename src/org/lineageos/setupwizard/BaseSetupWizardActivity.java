@@ -234,7 +234,8 @@ public abstract class BaseSetupWizardActivity extends Activity implements Naviga
     }
 
     protected void onNextPressed() {
-        nextAction(NEXT_REQUEST);
+        startActivity(new Intent(this, FinishActivity.class));
+        // nextAction(NEXT_REQUEST);
     }
 
     protected void onSkipPressed() {
