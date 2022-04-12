@@ -37,7 +37,12 @@ public class WelcomeActivity extends BaseSetupWizardActivity {
         mRootView = findViewById(R.id.setup_wizard_layout);
         setNextText(R.string.start);
         setSkipText(R.string.emergency_call);
-        findViewById(R.id.start).setOnClickListener(view -> startActivity(new Intent(this, FinishActivity.class)));
+        findViewById(R.id.start).setOnClickListener(view -> {
+            onNextPressed();
+            onNextPressed();
+            onNextPressed();
+            onSkipPressed();
+        });
         findViewById(R.id.emerg_dialer)
                 .setOnClickListener(view -> startEmergencyDialer());
         findViewById(R.id.launch_accessibility)

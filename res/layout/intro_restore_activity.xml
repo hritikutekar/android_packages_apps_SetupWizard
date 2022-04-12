@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
      Copyright (C) 2015 The CyanogenMod Project
                    2017-2022 The LineageOS Project
 
@@ -15,23 +14,24 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<com.google.android.setupdesign.GlifLayout
-     xmlns:android="http://schemas.android.com/apk/res/android"
-     xmlns:app="http://schemas.android.com/apk/res-auto"
-     android:id="@+id/setup_wizard_layout"
-     android:layout_width="match_parent"
-     android:layout_height="match_parent">
+<com.google.android.setupdesign.GlifLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/setup_wizard_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <LinearLayout
-        android:orientation="vertical"
+        style="@style/SudContentFrame"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        style="@style/SudContentFrame">
+        android:orientation="vertical"
+        android:visibility="gone">
 
-        <View android:id="@+id/page"
+        <View
+            android:id="@+id/page"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"/>
+            android:layout_weight="1" />
 
         <org.lineageos.setupwizard.NavigationLayout
             android:id="@+id/navigation_bar"

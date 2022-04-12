@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
      Copyright (C) 2013 The CyanogenMod Project
      Copyright (C) 2017-2021 The LineageOS Project
 
@@ -15,18 +14,17 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<com.google.android.setupdesign.GlifLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<com.google.android.setupdesign.GlifLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/setup_wizard_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <LinearLayout
-        android:orientation="vertical"
+        style="@style/SudContentFrame"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        style="@style/SudContentFrame">
+        android:orientation="vertical"
+        android:visibility="gone">
 
         <FrameLayout
             android:id="@+id/page"
@@ -40,35 +38,35 @@
                 android:fillViewport="true">
 
                 <LinearLayout
-                    android:orientation="vertical"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
 
                     <LinearLayout
                         android:id="@+id/location"
-                        android:orientation="horizontal"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:paddingLeft="@dimen/location_margin_left"
-                        android:paddingRight="@dimen/content_margin_right"
                         android:background="?android:attr/selectableItemBackground"
-                        android:clickable="true">
+                        android:clickable="true"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/location_margin_left"
+                        android:paddingRight="@dimen/content_margin_right">
 
 
                         <CheckBox
                             android:id="@+id/location_checkbox"
+                            style="@style/SudCheckBox.Multiline"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:duplicateParentState="true"
                             android:clickable="false"
-                            style="@style/SudCheckBox.Multiline" />
+                            android:duplicateParentState="true" />
 
                         <TextView
                             android:id="@+id/location_summary"
+                            style="@style/SudCheckBox.Multiline"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/location_access_summary"
-                            style="@style/SudCheckBox.Multiline" />
+                            android:text="@string/location_access_summary" />
 
                     </LinearLayout>
                 </LinearLayout>
